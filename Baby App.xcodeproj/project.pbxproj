@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F5C1CEBB95E004D5BE7 /* Onboard.swift */; };
+		64310F611CECD3AC004D5BE7 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F601CECD3AC004D5BE7 /* UIColorExt.swift */; };
+		64310F631CECD9AB004D5BE7 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F621CECD9AB004D5BE7 /* UIViewExt.swift */; };
+		64310F661CECDBCF004D5BE7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F651CECDBCF004D5BE7 /* R.generated.swift */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
-		64D8BC331CE4D91200F8020A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC321CE4D91200F8020A /* ViewController.swift */; };
 		64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Main.storyboard */; };
 		64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */; };
 		64D8BC3B1CE4D91200F8020A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC3A1CE4D91200F8020A /* Assets.xcassets */; };
@@ -39,9 +41,11 @@
 /* Begin PBXFileReference section */
 		3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baby App/Pods-Baby App.release.xcconfig"; sourceTree = "<group>"; };
 		64310F5C1CEBB95E004D5BE7 /* Onboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
+		64310F601CECD3AC004D5BE7 /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		64310F621CECD9AB004D5BE7 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		64310F651CECDBCF004D5BE7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64D8BC321CE4D91200F8020A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64D8BC381CE4D91200F8020A /* Baby_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baby_App.xcdatamodel; sourceTree = "<group>"; };
 		64D8BC3A1CE4D91200F8020A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		64310F5F1CECD393004D5BE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64310F601CECD3AC004D5BE7 /* UIColorExt.swift */,
+				64310F621CECD9AB004D5BE7 /* UIViewExt.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		64D8BC241CE4D91100F8020A = {
 			isa = PBXGroup;
 			children = (
@@ -125,11 +138,12 @@
 		64D8BC2F1CE4D91200F8020A /* Baby App */ = {
 			isa = PBXGroup;
 			children = (
+				64310F5F1CECD393004D5BE7 /* Extensions */,
 				64D8BC631CE4D95400F8020A /* Networking */,
 				64D8BC621CE4D94B00F8020A /* ViewModels */,
 				64D8BC611CE4D93E00F8020A /* ViewControllers */,
 				64D8BC301CE4D91200F8020A /* AppDelegate.swift */,
-				64D8BC321CE4D91200F8020A /* ViewController.swift */,
+				64310F651CECDBCF004D5BE7 /* R.generated.swift */,
 				64D8BC341CE4D91200F8020A /* Main.storyboard */,
 				64D8BC3A1CE4D91200F8020A /* Assets.xcassets */,
 				64D8BC3C1CE4D91200F8020A /* LaunchScreen.storyboard */,
@@ -187,12 +201,13 @@
 			buildConfigurationList = 64D8BC581CE4D91300F8020A /* Build configuration list for PBXNativeTarget "Baby App" */;
 			buildPhases = (
 				27E083B3BBD3E25F68591BB1 /* 📦 Check Pods Manifest.lock */,
+				64310F641CECDA9D004D5BE7 /* R.Swift Run Script */,
 				64D8BC291CE4D91100F8020A /* Sources */,
 				64D8BC2A1CE4D91100F8020A /* Frameworks */,
 				64D8BC2B1CE4D91100F8020A /* Resources */,
 				0F747BD952322A49159967B5 /* 📦 Embed Pods Frameworks */,
 				80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */,
-				64310F5E1CEBD0AC004D5BE7 /* ShellScript */,
+				64310F5E1CEBD0AC004D5BE7 /* CocoaPods Run Script */,
 			);
 			buildRules = (
 			);
@@ -251,6 +266,7 @@
 				TargetAttributes = {
 					64D8BC2C1CE4D91100F8020A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W29D5BE398;
 					};
 					64D8BC431CE4D91300F8020A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -340,18 +356,33 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		64310F5E1CEBD0AC004D5BE7 /* ShellScript */ = {
+		64310F5E1CEBD0AC004D5BE7 /* CocoaPods Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "CocoaPods Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" e5fb859afb8f689099c546a9b31c3e905f93d66f 560e2d984cac01ec56d2fed0b805b236fa6b433e55b559703211042d10ad3260";
+		};
+		64310F641CECDA9D004D5BE7 /* R.Swift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R.Swift Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
 		80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -375,10 +406,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D8BC331CE4D91200F8020A /* ViewController.swift in Sources */,
+				64310F631CECD9AB004D5BE7 /* UIViewExt.swift in Sources */,
 				64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */,
 				64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */,
+				64310F611CECD3AC004D5BE7 /* UIColorExt.swift in Sources */,
 				64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */,
+				64310F661CECDBCF004D5BE7 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +554,7 @@
 			baseConfigurationReference = B3A7A58936E7EFC25F65244F /* Pods-Baby App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-App";
@@ -533,6 +567,7 @@
 			baseConfigurationReference = 3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-App";

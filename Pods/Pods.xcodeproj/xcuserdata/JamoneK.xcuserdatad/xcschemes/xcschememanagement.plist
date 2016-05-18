@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>R.swift.Library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31C53C067E50F21AB585BE9951AC0674</key>
+		<key>324999D203089E4E9CDC7DA279270B77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56927D20BEAE6B1B012B79F5C85CDAEF</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>885021B008915990AA150310BAD825A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>A0933FC1307AD48F89C9FB7CEA3C29C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B93126D66EE820AE86E7821F3808B950</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,6 +11,6 @@ import UIKit
 class Onboard: UIViewController {
     
     override func viewDidLoad() {
-        //self.view.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        self.view.backgroundColor = UIColor.expectingPurple()
     }
 }

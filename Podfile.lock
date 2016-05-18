@@ -37,6 +37,9 @@ PODS:
     - Moya/Core
     - RxSwift (~> 2.0)
   - ObjectMapper (1.3.0)
+  - R.swift (2.2.2):
+    - R.swift.Library (~> 2.1.0)
+  - R.swift.Library (2.1.0)
   - Result (2.0.0)
   - RxCocoa (2.4):
     - RxSwift (~> 2.4)
@@ -48,6 +51,7 @@ DEPENDENCIES:
   - Fabric
   - FontAwesomeKit
   - Moya-ObjectMapper/RxSwift
+  - R.swift
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
 
@@ -60,10 +64,12 @@ SPEC CHECKSUMS:
   Moya: 4d526954c8afd79820991393d40d7d8af756ceee
   Moya-ObjectMapper: 0adee6d1e81560ecd69da18f87260777fc439b34
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  R.swift: ed40b24d65ad70c6cf48a2f249a26a3e5a4a7bc0
+  R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
   RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
 
-PODFILE CHECKSUM: aab7356825eeca42915ae27a04cb54c8bb53f98b
+PODFILE CHECKSUM: ab6e31814225c086b539984532f7d5be3c8ad218
 
 COCOAPODS: 1.0.0

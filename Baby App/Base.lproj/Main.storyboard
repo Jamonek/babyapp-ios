@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="97o-ZF-VXb">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Baby_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
+        <!--Onboard View-->
         <scene sceneID="a81-HG-m11">
             <objects>
-                <viewController id="97o-ZF-VXb" sceneMemberID="viewController">
+                <viewController title="Onboard View" id="97o-ZF-VXb" customClass="Onboard" customModule="Baby_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVG-Ps-vhc"/>
                         <viewControllerLayoutGuide type="bottom" id="FSe-AJ-w0t"/>
@@ -33,7 +16,42 @@
                     <view key="view" contentMode="scaleToFill" id="Ths-jL-k3h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Uo-1ip">
+                                <rect key="frame" x="82" y="398" width="437" height="30"/>
+                                <state key="normal" title="Sign in with Facebook"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-Ye-4fp">
+                                <rect key="frame" x="82" y="475" width="437" height="30"/>
+                                <state key="normal" title="Sign in with Twitter"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r5-oe-lwW">
+                                <rect key="frame" x="180" y="451" width="240" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBs-ZL-6mY">
+                                <rect key="frame" x="180" y="106" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="fiY-D8-a2Y"/>
+                                    <constraint firstAttribute="height" constant="128" id="uDr-iu-q43"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1r5-oe-lwW" firstAttribute="top" secondItem="Ths-jL-k3h" secondAttribute="top" constant="451" id="Cou-CR-4YZ"/>
+                            <constraint firstItem="dBs-ZL-6mY" firstAttribute="leading" secondItem="1r5-oe-lwW" secondAttribute="leading" id="FFv-jp-e4Z"/>
+                            <constraint firstItem="dBs-ZL-6mY" firstAttribute="top" secondItem="xVG-Ps-vhc" secondAttribute="bottom" constant="86" id="I1X-NB-lxT"/>
+                            <constraint firstItem="1r5-oe-lwW" firstAttribute="top" secondItem="jfj-Uo-1ip" secondAttribute="bottom" constant="23" id="MZx-9X-zvK"/>
+                            <constraint firstItem="jfj-Uo-1ip" firstAttribute="trailing" secondItem="dsY-Ye-4fp" secondAttribute="trailing" id="apc-Lh-Tjy"/>
+                            <constraint firstItem="1r5-oe-lwW" firstAttribute="centerX" secondItem="dsY-Ye-4fp" secondAttribute="centerX" id="d6p-wj-UWW"/>
+                            <constraint firstItem="FSe-AJ-w0t" firstAttribute="top" secondItem="dsY-Ye-4fp" secondAttribute="bottom" constant="95" id="glP-Qg-aQo"/>
+                            <constraint firstItem="jfj-Uo-1ip" firstAttribute="leading" secondItem="Ths-jL-k3h" secondAttribute="leadingMargin" constant="62" id="lgC-Dh-hw7"/>
+                            <constraint firstItem="dsY-Ye-4fp" firstAttribute="top" secondItem="1r5-oe-lwW" secondAttribute="bottom" constant="22" id="sMC-Wq-2JW"/>
+                            <constraint firstItem="jfj-Uo-1ip" firstAttribute="leading" secondItem="dsY-Ye-4fp" secondAttribute="leading" id="t68-3B-jHy"/>
+                            <constraint firstItem="dBs-ZL-6mY" firstAttribute="trailing" secondItem="1r5-oe-lwW" secondAttribute="trailing" id="xTU-fc-Tan"/>
+                            <constraint firstItem="dBs-ZL-6mY" firstAttribute="centerX" secondItem="Ths-jL-k3h" secondAttribute="centerX" id="yOj-EV-OBa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wec-xO-Lbg" userLabel="First Responder" sceneMemberID="firstResponder"/>

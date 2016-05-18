@@ -9,4 +9,5 @@ target 'Baby App' do
     pod 'FontAwesomeKit'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'R.swift'
 end
