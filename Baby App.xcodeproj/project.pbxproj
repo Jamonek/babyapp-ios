@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F5C1CEBB95E004D5BE7 /* Onboard.swift */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
 		64D8BC331CE4D91200F8020A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC321CE4D91200F8020A /* ViewController.swift */; };
 		64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		64D8BC3E1CE4D91200F8020A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC3C1CE4D91200F8020A /* LaunchScreen.storyboard */; };
 		64D8BC491CE4D91300F8020A /* Baby_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC481CE4D91300F8020A /* Baby_AppTests.swift */; };
 		64D8BC541CE4D91300F8020A /* Baby_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC531CE4D91300F8020A /* Baby_AppUITests.swift */; };
+		D34BF2FDA29B9A16F7F9344A /* Pods_Baby_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701A43CE581F2968FA2D4742 /* Pods_Baby_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baby App/Pods-Baby App.release.xcconfig"; sourceTree = "<group>"; };
+		64310F5C1CEBB95E004D5BE7 /* Onboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D8BC321CE4D91200F8020A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		64D8BC4F1CE4D91300F8020A /* Baby AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Baby AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC531CE4D91300F8020A /* Baby_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby_AppUITests.swift; sourceTree = "<group>"; };
 		64D8BC551CE4D91300F8020A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		701A43CE581F2968FA2D4742 /* Pods_Baby_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baby_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3A7A58936E7EFC25F65244F /* Pods-Baby App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baby App/Pods-Baby App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34BF2FDA29B9A16F7F9344A /* Pods_Baby_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26408F8051F8ABB33A64194B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3A7A58936E7EFC25F65244F /* Pods-Baby App.debug.xcconfig */,
+				3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		26C9DEF58F34ABE7B6A76FAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				701A43CE581F2968FA2D4742 /* Pods_Baby_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64D8BC241CE4D91100F8020A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 				64D8BC471CE4D91300F8020A /* Baby AppTests */,
 				64D8BC521CE4D91300F8020A /* Baby AppUITests */,
 				64D8BC2E1CE4D91100F8020A /* Products */,
+				26408F8051F8ABB33A64194B /* Pods */,
+				26C9DEF58F34ABE7B6A76FAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +125,9 @@
 		64D8BC2F1CE4D91200F8020A /* Baby App */ = {
 			isa = PBXGroup;
 			children = (
+				64D8BC631CE4D95400F8020A /* Networking */,
+				64D8BC621CE4D94B00F8020A /* ViewModels */,
+				64D8BC611CE4D93E00F8020A /* ViewControllers */,
 				64D8BC301CE4D91200F8020A /* AppDelegate.swift */,
 				64D8BC321CE4D91200F8020A /* ViewController.swift */,
 				64D8BC341CE4D91200F8020A /* Main.storyboard */,
@@ -128,6 +157,28 @@
 			path = "Baby AppUITests";
 			sourceTree = "<group>";
 		};
+		64D8BC611CE4D93E00F8020A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				64310F5C1CEBB95E004D5BE7 /* Onboard.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		64D8BC621CE4D94B00F8020A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		64D8BC631CE4D95400F8020A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +186,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64D8BC581CE4D91300F8020A /* Build configuration list for PBXNativeTarget "Baby App" */;
 			buildPhases = (
+				27E083B3BBD3E25F68591BB1 /* 📦 Check Pods Manifest.lock */,
 				64D8BC291CE4D91100F8020A /* Sources */,
 				64D8BC2A1CE4D91100F8020A /* Frameworks */,
 				64D8BC2B1CE4D91100F8020A /* Resources */,
+				0F747BD952322A49159967B5 /* 📦 Embed Pods Frameworks */,
+				80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */,
+				64310F5E1CEBD0AC004D5BE7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,12 +309,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F747BD952322A49159967B5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby App/Pods-Baby App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27E083B3BBD3E25F68591BB1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64310F5E1CEBD0AC004D5BE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" e5fb859afb8f689099c546a9b31c3e905f93d66f 560e2d984cac01ec56d2fed0b805b236fa6b433e55b559703211042d10ad3260";
+		};
+		80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby App/Pods-Baby App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64D8BC291CE4D91100F8020A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				64D8BC331CE4D91200F8020A /* ViewController.swift in Sources */,
+				64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */,
 				64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */,
 				64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */,
 			);
@@ -353,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -401,6 +518,7 @@
 		};
 		64D8BC591CE4D91300F8020A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A7A58936E7EFC25F65244F /* Pods-Baby App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Baby App/Info.plist";
@@ -412,6 +530,7 @@
 		};
 		64D8BC5A1CE4D91300F8020A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Baby App/Info.plist";
@@ -486,6 +605,7 @@
 				64D8BC5A1CE4D91300F8020A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64D8BC5B1CE4D91300F8020A /* Build configuration list for PBXNativeTarget "Baby AppTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +614,7 @@
 				64D8BC5D1CE4D91300F8020A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64D8BC5E1CE4D91300F8020A /* Build configuration list for PBXNativeTarget "Baby AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +623,7 @@
 				64D8BC601CE4D91300F8020A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
