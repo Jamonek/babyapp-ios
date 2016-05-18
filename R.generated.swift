@@ -6,30 +6,66 @@ import Rswift
 import UIKit
 
 /// This `R` struct is code generateted, and contains references to static resources.
-struct R {
+struct R: Rswift.Validatable {
+  static func validate() throws {
+    try intern.validate()
+  }
+  
   /// This `R.color` struct is generated, and contains static references to 0 color palettes.
   struct color {
     private init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `FontAwesome.otf`.
+    static let fontAwesomeOtf = FileResource(bundle: _R.hostingBundle, name: "FontAwesome", pathExtension: "otf")
+    
+    /// `bundle.URLForResource("FontAwesome", withExtension: "otf")`
+    static func fontAwesomeOtf(_: Void) -> NSURL? {
+      let fileResource = R.file.fontAwesomeOtf
+      return fileResource.bundle.URLForResource(fileResource)
+    }
+    
     private init() {}
   }
   
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
+  /// This `R.font` struct is generated, and contains static references to 1 fonts.
   struct font {
+    /// Font `FontAwesome`.
+    static let fontAwesome = FontResource(fontName: "FontAwesome")
+    
+    /// `UIFont(name: "FontAwesome", size: ...)`
+    static func fontAwesome(size size: CGFloat) -> UIFont? {
+      return UIFont(resource: fontAwesome, size: size)
+    }
+    
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `Baby Pic`.
     static let babyPic = ImageResource(bundle: _R.hostingBundle, name: "Baby Pic")
+    /// Image `Line`.
+    static let line = ImageResource(bundle: _R.hostingBundle, name: "Line")
     
     /// `UIImage(named: "Baby Pic", bundle: ..., traitCollection: ...)`
     static func babyPic(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.babyPic, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "Line", bundle: ..., traitCollection: ...)`
+    static func line(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.line, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    private init() {}
+  }
+  
+  private struct intern: Rswift.Validatable {
+    static func validate() throws {
+      try _R.validate()
     }
     
     private init() {}
@@ -78,14 +114,22 @@ struct R {
   private init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
   static let hostingBundle = NSBundle(identifier: "io.mehe.Baby-App") ?? NSBundle.mainBundle()
+  
+  static func validate() throws {
+    try storyboard.validate()
+  }
   
   struct nib {
     private init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try main.validate()
+    }
+    
     struct launchScreen: StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIViewController
       
@@ -95,11 +139,16 @@ struct _R {
       private init() {}
     }
     
-    struct main: StoryboardResourceWithInitialControllerType {
+    struct main: StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = Onboard
       
       let bundle = _R.hostingBundle
       let name = "Main"
+      
+      static func validate() throws {
+        if UIImage(named: "Baby Pic") == nil { throw ValidationError(description: "[R.swift] Image named 'Baby Pic' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIImage(named: "Line") == nil { throw ValidationError(description: "[R.swift] Image named 'Line' is used in storyboard 'Main', but couldn't be loaded.") }
+      }
       
       private init() {}
     }
