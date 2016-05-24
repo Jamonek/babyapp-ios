@@ -13,6 +13,8 @@
 		64310F661CECDBCF004D5BE7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F651CECDBCF004D5BE7 /* R.generated.swift */; };
 		64310F681CECE70E004D5BE7 /* HairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F671CECE70E004D5BE7 /* HairlineView.swift */; };
 		64310F6B1CECEFC1004D5BE7 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64310F6A1CECEFC1004D5BE7 /* FontAwesome.otf */; };
+		64310F6D1CED64BE004D5BE7 /* SigninEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */; };
+		647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 647654511CF3BA2C00612DBC /* GoogleService-Info.plist */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
 		64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Main.storyboard */; };
 		64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */; };
@@ -48,6 +50,8 @@
 		64310F651CECDBCF004D5BE7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		64310F671CECE70E004D5BE7 /* HairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairlineView.swift; sourceTree = "<group>"; };
 		64310F6A1CECEFC1004D5BE7 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninEmailVC.swift; sourceTree = "<group>"; };
+		647654511CF3BA2C00612DBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		64D8BC2F1CE4D91200F8020A /* Baby App */ = {
 			isa = PBXGroup;
 			children = (
+				647654511CF3BA2C00612DBC /* GoogleService-Info.plist */,
 				64310F691CECEFB2004D5BE7 /* Fonts */,
 				64310F5F1CECD393004D5BE7 /* Extensions */,
 				64D8BC631CE4D95400F8020A /* Networking */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				64310F5C1CEBB95E004D5BE7 /* Onboard.swift */,
+				64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			files = (
 				64D8BC3E1CE4D91200F8020A /* LaunchScreen.storyboard in Resources */,
 				64D8BC3B1CE4D91200F8020A /* Assets.xcassets in Resources */,
+				647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */,
 				64310F6B1CECEFC1004D5BE7 /* FontAwesome.otf in Resources */,
 				64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */,
 			);
@@ -428,6 +435,7 @@
 				64310F611CECD3AC004D5BE7 /* UIColorExt.swift in Sources */,
 				64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */,
 				64310F661CECDBCF004D5BE7 /* R.generated.swift in Sources */,
+				64310F6D1CED64BE004D5BE7 /* SigninEmailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +581,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-App";
+				PRODUCT_BUNDLE_IDENTIFIER = io.mehe.Expecting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -586,7 +594,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-App";
+				PRODUCT_BUNDLE_IDENTIFIER = io.mehe.Expecting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -16,14 +16,22 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
     /// Resource file `FontAwesome.otf`.
     static let fontAwesomeOtf = FileResource(bundle: _R.hostingBundle, name: "FontAwesome", pathExtension: "otf")
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = FileResource(bundle: _R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
     
     /// `bundle.URLForResource("FontAwesome", withExtension: "otf")`
     static func fontAwesomeOtf(_: Void) -> NSURL? {
       let fileResource = R.file.fontAwesomeOtf
+      return fileResource.bundle.URLForResource(fileResource)
+    }
+    
+    /// `bundle.URLForResource("GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void) -> NSURL? {
+      let fileResource = R.file.googleServiceInfoPlist
       return fileResource.bundle.URLForResource(fileResource)
     }
     
@@ -115,7 +123,7 @@ struct R: Rswift.Validatable {
 }
 
 struct _R: Rswift.Validatable {
-  static let hostingBundle = NSBundle(identifier: "io.mehe.Baby-App") ?? NSBundle.mainBundle()
+  static let hostingBundle = NSBundle(identifier: "io.mehe.Expecting") ?? NSBundle.mainBundle()
   
   static func validate() throws {
     try storyboard.validate()
@@ -140,7 +148,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = Onboard
+      typealias InitialController = UINavigationController
       
       let bundle = _R.hostingBundle
       let name = "Main"
