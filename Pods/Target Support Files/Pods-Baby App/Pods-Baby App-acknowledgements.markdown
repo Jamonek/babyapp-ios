@@ -173,6 +173,10 @@ Copyright 2016 Google
 
 Copyright 2016 Google Inc.
 
+## FirebaseMessaging
+
+Copyright 2016 Google Inc.
+
 ## FirebaseRemoteConfig
 
 Copyright 2016 Google Inc.

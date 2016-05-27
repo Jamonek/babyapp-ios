@@ -15,6 +15,7 @@ target 'Baby App' do
     pod "Firebase/Auth"
     pod "Firebase/Database"
     pod "Firebase/RemoteConfig"
+    pod "Firebase/Messaging"
     pod "FBSDKCoreKit"
     pod "FBSDKShareKit"
     pod "FBSDKLoginKit"

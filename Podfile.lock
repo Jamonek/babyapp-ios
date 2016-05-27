@@ -26,6 +26,9 @@ PODS:
   - Firebase/Database (3.2.0):
     - Firebase/Analytics (= 3.2.0)
     - FirebaseDatabase (= 3.0.1)
+  - Firebase/Messaging (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+    - FirebaseMessaging (= 1.1.0)
   - Firebase/RemoteConfig (3.2.0):
     - Firebase/Analytics (= 3.2.0)
     - FirebaseRemoteConfig (= 1.1.1)
@@ -44,6 +47,11 @@ PODS:
   - FirebaseDatabase (3.0.1):
     - FirebaseAnalytics (~> 3.2)
   - FirebaseInstanceID (1.0.6)
+  - FirebaseMessaging (1.1.0):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleIPhoneUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
   - FirebaseRemoteConfig (1.1.1):
     - FirebaseAnalytics (~> 3.2)
     - FirebaseInstanceID (~> 1.0)
@@ -120,6 +128,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - Firebase/Auth
   - Firebase/Database
+  - Firebase/Messaging
   - Firebase/RemoteConfig
   - Firebase/Storage
   - FontAwesomeKit
@@ -145,6 +154,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 94b851fc345ce98036dfedfdc2eddeaef8fa3b4c
   FirebaseDatabase: 34301d11621a83546f39f670d256477ba6f7fcea
   FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
+  FirebaseMessaging: 8a92e9ea70673605aa7d1803d2d5aa3eb946009c
   FirebaseRemoteConfig: 3260ced812d2adcbb9bcefe0dc78fdce7b8090e6
   FirebaseStorage: e9c32a8d246c07eeefd78180c22736aa1b81e81b
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
@@ -167,6 +177,6 @@ SPEC CHECKSUMS:
   TwitterCore: abc46da2bc4b76e2c68a74cd8671a071a8e3abbf
   TwitterKit: 38232c31f622db1f26a5952436eaa88d10763fd0
 
-PODFILE CHECKSUM: 3612d6d03b47f4f9a82dbe702a6c3bacf7a117de
+PODFILE CHECKSUM: 39012ed61ab94661e4b07ae81481382dc57cbc02
 
 COCOAPODS: 1.0.0
