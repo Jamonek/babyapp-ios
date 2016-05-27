@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self, Twitter.self])
         FIRApp.configure()
+        Twitter.sharedInstance().startWithConsumerKey("phBoB7aIeagPZSIOfnOGqom3p", consumerSecret: "2v4nG3LrcUVwVjGJpf1y9Yh1DaEWHyJvDddSRcm7LwMuuAJPuP")
         return FBSDKApplicationDelegate.sharedInstance()
             .application(application, didFinishLaunchingWithOptions: launchOptions)
     }

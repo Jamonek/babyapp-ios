@@ -85,14 +85,14 @@ class Onboard: UIViewController {
         if let user = FIRAuth.auth()?.currentUser {
             user.linkWithCredential(credential) { (user, error) in
                 if let error = error {
-                    print(error.localizedDescription)
+                    print(error.description)
                     return
                 }
             }
         } else {
             FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
                 if let error = error {
-                    print(error.localizedDescription)
+                    print(error.description)
                     return
                 }
             }
