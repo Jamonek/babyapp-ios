@@ -18,4 +18,6 @@ target 'Baby App' do
     pod "FBSDKCoreKit"
     pod "FBSDKShareKit"
     pod "FBSDKLoginKit"
+    pod "TSMessages"
+    pod "TwitterKit"
 end

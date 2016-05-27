@@ -15,6 +15,7 @@
 		64310F6B1CECEFC1004D5BE7 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64310F6A1CECEFC1004D5BE7 /* FontAwesome.otf */; };
 		64310F6D1CED64BE004D5BE7 /* SigninEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */; };
 		647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 647654511CF3BA2C00612DBC /* GoogleService-Info.plist */; };
+		647654541CF3F84900612DBC /* SignupEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647654531CF3F84900612DBC /* SignupEmailVC.swift */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
 		64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Main.storyboard */; };
 		64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */; };
@@ -52,6 +53,7 @@
 		64310F6A1CECEFC1004D5BE7 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninEmailVC.swift; sourceTree = "<group>"; };
 		647654511CF3BA2C00612DBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		647654531CF3F84900612DBC /* SignupEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupEmailVC.swift; sourceTree = "<group>"; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				64310F5C1CEBB95E004D5BE7 /* Onboard.swift */,
 				64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */,
+				647654531CF3F84900612DBC /* SignupEmailVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647654541CF3F84900612DBC /* SignupEmailVC.swift in Sources */,
 				64310F631CECD9AB004D5BE7 /* UIViewExt.swift in Sources */,
 				64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */,
 				64310F681CECE70E004D5BE7 /* HairlineView.swift in Sources */,

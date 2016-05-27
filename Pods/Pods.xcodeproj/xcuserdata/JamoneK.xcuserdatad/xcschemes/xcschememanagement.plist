@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Moya-ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -79,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TSMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,12 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2ED02EC9E5EE712D362F31DA0BCE0538</key>
+		<key>2B9510B5644F45D850BDB3F4FE522B97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30358E963A0254BDB62EB4E223E00652</key>
+		<key>2ED02EC9E5EE712D362F31DA0BCE0538</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>869D5D2686491BB481D0332A5C51D5A4</key>
+		<key>803C9511316F22A1E98FA9C946938CB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,12 +162,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE4455D810BD79F7B660B3CEACD38BA4</key>
+		<key>A234449A1E17FBA482CD5BEB5B145035</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C647E56049D162DA79A4913CE2FF7FAD</key>
+		<key>A5F2E651E069D917F7452374F5487320</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C408D4E183A88B763793C217A66A1950</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAEF601A8965AE5DE4348A841698F5D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

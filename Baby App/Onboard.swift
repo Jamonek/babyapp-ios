@@ -8,14 +8,23 @@
 
 import UIKit
 import FontAwesomeKit
+import Firebase
+import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
+import TwitterKit
 
 class Onboard: UIViewController {
+    
+    // MARK: Variables
     @IBOutlet weak var viewLogo: UIImageView!
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var buttonSeparater: UIView!
     
+    
     override func viewDidLoad() {
+        // MARK: Setting the title and font of our buttons
         let facebookString = FAKFontAwesome.facebookSquareIconWithSize(18).attributedString()
         let twitterString = FAKFontAwesome.twitterIconWithSize(18).attributedString()
         
@@ -32,7 +41,62 @@ class Onboard: UIViewController {
         
         self.facebookButton.setAttributedTitle(facebookButtonString, forState: .Normal)
         self.twitterButton.setAttributedTitle(twitterButtonString, forState: .Normal)
-        //self.facebookButton.setAttributedTitle(, forState: <#T##UIControlState#>)
+        
+        // MARK: Targets for Facebook and Twitter button
+        self.facebookButton.addTarget(self, action: #selector(Onboard.loginWithFacebook(_:)), forControlEvents: .TouchUpInside)
+        self.twitterButton.addTarget(self, action: #selector(Onboard.loginWithTwitter(_:)), forControlEvents: .TouchUpInside)
+    }
+    
+    // MARK: Login user with Facebook account
+    func loginWithFacebook(sender: UIButton) {
+        let FB = FBSDKLoginManager()
+        FB.logInWithReadPermissions(["email"], fromViewController: self, handler: {(result, error) -> Void in
+            if error != nil {
+                print(error)
+            } else if result.isCancelled {
+                print("LOGIN CANCELLED")
+            } else {
+                if result.grantedPermissions.contains("email") {
+                    
+                    let token = FBSDKAccessToken.currentAccessToken().tokenString
+                    
+                    let FAFBCredential = FIRFacebookAuthProvider.credentialWithAccessToken(token)
+                    self.handleLogin(FAFBCredential)
+                }
+            }
+        })
+    }
+    
+    // MARK: Login user with Twitter account
+    func loginWithTwitter(sender: UIButton) {
+        Twitter.sharedInstance().logInWithCompletion() { (session, error) in
+            if let session = session {
+                let credential = FIRTwitterAuthProvider.credentialWithToken(session.authToken, secret: session.authTokenSecret)
+                self.handleLogin(credential)
+                
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+        
+    // MARK: Move to AuthManager class
+    func handleLogin(credential: FIRAuthCredential) {
+        if let user = FIRAuth.auth()?.currentUser {
+            user.linkWithCredential(credential) { (user, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+            }
+        } else {
+            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+            }
+        }
     }
     
     override func viewWillLayoutSubviews() {
