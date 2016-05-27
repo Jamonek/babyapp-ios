@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64223F5A1CF8AE270024CBF6 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 64223F591CF8AE270024CBF6 /* TSMessagesDefaultDesign.json */; };
+		64223F5D1CF8AF880024CBF6 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64223F5C1CF8AF880024CBF6 /* App.storyboard */; };
 		64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F5C1CEBB95E004D5BE7 /* Onboard.swift */; };
 		64310F611CECD3AC004D5BE7 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F601CECD3AC004D5BE7 /* UIColorExt.swift */; };
 		64310F631CECD9AB004D5BE7 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F621CECD9AB004D5BE7 /* UIViewExt.swift */; };
@@ -17,7 +19,7 @@
 		647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 647654511CF3BA2C00612DBC /* GoogleService-Info.plist */; };
 		647654541CF3F84900612DBC /* SignupEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647654531CF3F84900612DBC /* SignupEmailVC.swift */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
-		64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Main.storyboard */; };
+		64D8BC361CE4D91200F8020A /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Onboard.storyboard */; };
 		64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */; };
 		64D8BC3B1CE4D91200F8020A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC3A1CE4D91200F8020A /* Assets.xcassets */; };
 		64D8BC3E1CE4D91200F8020A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC3C1CE4D91200F8020A /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baby App/Pods-Baby App.release.xcconfig"; sourceTree = "<group>"; };
+		64223F591CF8AE270024CBF6 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
+		64223F5C1CF8AF880024CBF6 /* App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		64310F5C1CEBB95E004D5BE7 /* Onboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		64310F601CECD3AC004D5BE7 /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		64310F621CECD9AB004D5BE7 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -56,7 +60,7 @@
 		647654531CF3F84900612DBC /* SignupEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupEmailVC.swift; sourceTree = "<group>"; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboard.storyboard; sourceTree = "<group>"; };
 		64D8BC381CE4D91200F8020A /* Baby_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baby_App.xcdatamodel; sourceTree = "<group>"; };
 		64D8BC3A1CE4D91200F8020A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D8BC3D1CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		64223F5B1CF8AF500024CBF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				64D8BC341CE4D91200F8020A /* Onboard.storyboard */,
+				64223F5C1CF8AF880024CBF6 /* App.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		64310F5F1CECD393004D5BE7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,14 +175,15 @@
 				64310F5F1CECD393004D5BE7 /* Extensions */,
 				64D8BC631CE4D95400F8020A /* Networking */,
 				64D8BC621CE4D94B00F8020A /* ViewModels */,
+				64223F5B1CF8AF500024CBF6 /* Storyboards */,
 				64D8BC611CE4D93E00F8020A /* ViewControllers */,
 				64D8BC301CE4D91200F8020A /* AppDelegate.swift */,
 				64310F651CECDBCF004D5BE7 /* R.generated.swift */,
-				64D8BC341CE4D91200F8020A /* Main.storyboard */,
 				64D8BC3A1CE4D91200F8020A /* Assets.xcassets */,
 				64D8BC3C1CE4D91200F8020A /* LaunchScreen.storyboard */,
 				64D8BC3F1CE4D91300F8020A /* Info.plist */,
 				64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */,
+				64223F591CF8AE270024CBF6 /* TSMessagesDefaultDesign.json */,
 			);
 			path = "Baby App";
 			sourceTree = "<group>";
@@ -301,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64D8BC281CE4D91100F8020A /* Build configuration list for PBXProject "Baby App" */;
+			buildConfigurationList = 64D8BC281CE4D91100F8020A /* Build configuration list for PBXProject "Expecting" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -330,7 +344,9 @@
 				64D8BC3B1CE4D91200F8020A /* Assets.xcassets in Resources */,
 				647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */,
 				64310F6B1CECEFC1004D5BE7 /* FontAwesome.otf in Resources */,
-				64D8BC361CE4D91200F8020A /* Main.storyboard in Resources */,
+				64223F5D1CF8AF880024CBF6 /* App.storyboard in Resources */,
+				64223F5A1CF8AE270024CBF6 /* TSMessagesDefaultDesign.json in Resources */,
+				64D8BC361CE4D91200F8020A /* Onboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +491,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		64D8BC341CE4D91200F8020A /* Main.storyboard */ = {
+		64D8BC341CE4D91200F8020A /* Onboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				64D8BC351CE4D91200F8020A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Onboard.storyboard;
 			sourceTree = "<group>";
 		};
 		64D8BC3C1CE4D91200F8020A /* LaunchScreen.storyboard */ = {
@@ -652,7 +668,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64D8BC281CE4D91100F8020A /* Build configuration list for PBXProject "Baby App" */ = {
+		64D8BC281CE4D91100F8020A /* Build configuration list for PBXProject "Expecting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64D8BC561CE4D91300F8020A /* Debug */,

@@ -24,7 +24,7 @@ class SignupEmailVC: UIViewController {
     
     @IBAction func signup() {
         guard let firstName = firstNameTextField.text, lastName = lastNameTextField.text, email = emailTextField.text, password = passwordTextField.text else {
-        print("Test")
+        print("Failed")
             return
         }
         

@@ -16,12 +16,14 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `FontAwesome.otf`.
     static let fontAwesomeOtf = FileResource(bundle: _R.hostingBundle, name: "FontAwesome", pathExtension: "otf")
     /// Resource file `GoogleService-Info.plist`.
     static let googleServiceInfoPlist = FileResource(bundle: _R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
+    /// Resource file `TSMessagesDefaultDesign.json`.
+    static let tSMessagesDefaultDesignJson = FileResource(bundle: _R.hostingBundle, name: "TSMessagesDefaultDesign", pathExtension: "json")
     
     /// `bundle.URLForResource("FontAwesome", withExtension: "otf")`
     static func fontAwesomeOtf(_: Void) -> NSURL? {
@@ -32,6 +34,12 @@ struct R: Rswift.Validatable {
     /// `bundle.URLForResource("GoogleService-Info", withExtension: "plist")`
     static func googleServiceInfoPlist(_: Void) -> NSURL? {
       let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.URLForResource(fileResource)
+    }
+    
+    /// `bundle.URLForResource("TSMessagesDefaultDesign", withExtension: "json")`
+    static func tSMessagesDefaultDesignJson(_: Void) -> NSURL? {
+      let fileResource = R.file.tSMessagesDefaultDesignJson
       return fileResource.bundle.URLForResource(fileResource)
     }
     
@@ -94,21 +102,28 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `App`.
+    static let app = _R.storyboard.app()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
+    /// Storyboard `Onboard`.
+    static let onboard = _R.storyboard.onboard()
+    
+    /// `UIStoryboard(name: "App", bundle: ...)`
+    static func app(_: Void) -> UIStoryboard {
+      return UIStoryboard(resource: R.storyboard.app)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.launchScreen)
     }
     
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void) -> UIStoryboard {
-      return UIStoryboard(resource: R.storyboard.main)
+    /// `UIStoryboard(name: "Onboard", bundle: ...)`
+    static func onboard(_: Void) -> UIStoryboard {
+      return UIStoryboard(resource: R.storyboard.onboard)
     }
     
     private init() {}
@@ -135,7 +150,14 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
+      try onboard.validate()
+    }
+    
+    struct app: StoryboardResourceType {
+      let bundle = _R.hostingBundle
+      let name = "App"
+      
+      private init() {}
     }
     
     struct launchScreen: StoryboardResourceWithInitialControllerType {
@@ -147,15 +169,15 @@ struct _R: Rswift.Validatable {
       private init() {}
     }
     
-    struct main: StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    struct onboard: StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UINavigationController
       
       let bundle = _R.hostingBundle
-      let name = "Main"
+      let name = "Onboard"
       
       static func validate() throws {
-        if UIImage(named: "Baby Pic") == nil { throw ValidationError(description: "[R.swift] Image named 'Baby Pic' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIImage(named: "Line") == nil { throw ValidationError(description: "[R.swift] Image named 'Line' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIImage(named: "Baby Pic") == nil { throw ValidationError(description: "[R.swift] Image named 'Baby Pic' is used in storyboard 'Onboard', but couldn't be loaded.") }
+        if UIImage(named: "Line") == nil { throw ValidationError(description: "[R.swift] Image named 'Line' is used in storyboard 'Onboard', but couldn't be loaded.") }
       }
       
       private init() {}
