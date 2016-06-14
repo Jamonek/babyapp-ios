@@ -59,21 +59,49 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `Baby Pic`.
     static let babyPic = ImageResource(bundle: _R.hostingBundle, name: "Baby Pic")
+    /// Image `calendar`.
+    static let calendar = ImageResource(bundle: _R.hostingBundle, name: "calendar")
+    /// Image `home`.
+    static let home = ImageResource(bundle: _R.hostingBundle, name: "home")
+    /// Image `interface`.
+    static let interface = ImageResource(bundle: _R.hostingBundle, name: "interface")
     /// Image `Line`.
     static let line = ImageResource(bundle: _R.hostingBundle, name: "Line")
+    /// Image `people-shout`.
+    static let peopleShout = ImageResource(bundle: _R.hostingBundle, name: "people-shout")
     
     /// `UIImage(named: "Baby Pic", bundle: ..., traitCollection: ...)`
     static func babyPic(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.babyPic, compatibleWithTraitCollection: traitCollection)
     }
     
+    /// `UIImage(named: "calendar", bundle: ..., traitCollection: ...)`
+    static func calendar(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.calendar, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
+    static func home(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.home, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "interface", bundle: ..., traitCollection: ...)`
+    static func interface(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.interface, compatibleWithTraitCollection: traitCollection)
+    }
+    
     /// `UIImage(named: "Line", bundle: ..., traitCollection: ...)`
     static func line(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.line, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "people-shout", bundle: ..., traitCollection: ...)`
+    static func peopleShout(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.peopleShout, compatibleWithTraitCollection: traitCollection)
     }
     
     private init() {}
@@ -150,12 +178,50 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try app.validate()
       try onboard.validate()
     }
     
-    struct app: StoryboardResourceType {
+    struct app: StoryboardResourceType, Rswift.Validatable {
+      let app_calendar = StoryboardViewControllerResource<CalendarVC>(identifier: "app_calendar")
+      let app_feed = StoryboardViewControllerResource<FeedVC>(identifier: "app_feed")
+      let app_home = StoryboardViewControllerResource<HomeVC>(identifier: "app_home")
+      let app_lifeline = StoryboardViewControllerResource<LifeLineVC>(identifier: "app_lifeline")
+      let app_tab = StoryboardViewControllerResource<TabBarController>(identifier: "app_tab")
       let bundle = _R.hostingBundle
       let name = "App"
+      
+      func app_calendar(_: Void) -> CalendarVC? {
+        return UIStoryboard(resource: self).instantiateViewController(app_calendar)
+      }
+      
+      func app_feed(_: Void) -> FeedVC? {
+        return UIStoryboard(resource: self).instantiateViewController(app_feed)
+      }
+      
+      func app_home(_: Void) -> HomeVC? {
+        return UIStoryboard(resource: self).instantiateViewController(app_home)
+      }
+      
+      func app_lifeline(_: Void) -> LifeLineVC? {
+        return UIStoryboard(resource: self).instantiateViewController(app_lifeline)
+      }
+      
+      func app_tab(_: Void) -> TabBarController? {
+        return UIStoryboard(resource: self).instantiateViewController(app_tab)
+      }
+      
+      static func validate() throws {
+        if UIImage(named: "interface") == nil { throw ValidationError(description: "[R.swift] Image named 'interface' is used in storyboard 'App', but couldn't be loaded.") }
+        if UIImage(named: "calendar") == nil { throw ValidationError(description: "[R.swift] Image named 'calendar' is used in storyboard 'App', but couldn't be loaded.") }
+        if UIImage(named: "people-shout") == nil { throw ValidationError(description: "[R.swift] Image named 'people-shout' is used in storyboard 'App', but couldn't be loaded.") }
+        if UIImage(named: "home") == nil { throw ValidationError(description: "[R.swift] Image named 'home' is used in storyboard 'App', but couldn't be loaded.") }
+        if _R.storyboard.app().app_calendar() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'app_calendar' could not be loaded from storyboard 'App' as 'CalendarVC'.") }
+        if _R.storyboard.app().app_lifeline() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'app_lifeline' could not be loaded from storyboard 'App' as 'LifeLineVC'.") }
+        if _R.storyboard.app().app_feed() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'app_feed' could not be loaded from storyboard 'App' as 'FeedVC'.") }
+        if _R.storyboard.app().app_home() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'app_home' could not be loaded from storyboard 'App' as 'HomeVC'.") }
+        if _R.storyboard.app().app_tab() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'app_tab' could not be loaded from storyboard 'App' as 'TabBarController'.") }
+      }
       
       private init() {}
     }

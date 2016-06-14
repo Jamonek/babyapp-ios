@@ -13,6 +13,7 @@ import Crashlytics
 import Firebase
 import FBSDKCoreKit
 import TwitterKit
+import ChameleonFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self, Twitter.self])
         FIRApp.configure()
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatMagentaColor(), withSecondaryColor: UIColor.expectingPurple(), andContentStyle: .Contrast)
         return FBSDKApplicationDelegate.sharedInstance()
             .application(application, didFinishLaunchingWithOptions: launchOptions)
     }

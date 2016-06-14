@@ -18,6 +18,12 @@
 		64310F6D1CED64BE004D5BE7 /* SigninEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */; };
 		647654521CF3BA2C00612DBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 647654511CF3BA2C00612DBC /* GoogleService-Info.plist */; };
 		647654541CF3F84900612DBC /* SignupEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647654531CF3F84900612DBC /* SignupEmailVC.swift */; };
+		648E22831D108B310012E007 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E22821D108B310012E007 /* HomeVC.swift */; };
+		648E22851D108B940012E007 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E22841D108B940012E007 /* FeedVC.swift */; };
+		648E22871D108BB70012E007 /* LifeLineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E22861D108BB70012E007 /* LifeLineVC.swift */; };
+		648E22891D108BE80012E007 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E22881D108BE80012E007 /* CalendarVC.swift */; };
+		648E228B1D1093EF0012E007 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E228A1D1093EF0012E007 /* BaseVC.swift */; };
+		648E228D1D1095880012E007 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E228C1D1095880012E007 /* TabBarController.swift */; };
 		64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC301CE4D91200F8020A /* AppDelegate.swift */; };
 		64D8BC361CE4D91200F8020A /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D8BC341CE4D91200F8020A /* Onboard.storyboard */; };
 		64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D8BC371CE4D91200F8020A /* Baby_App.xcdatamodeld */; };
@@ -58,6 +64,12 @@
 		64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninEmailVC.swift; sourceTree = "<group>"; };
 		647654511CF3BA2C00612DBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		647654531CF3F84900612DBC /* SignupEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupEmailVC.swift; sourceTree = "<group>"; };
+		648E22821D108B310012E007 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		648E22841D108B940012E007 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		648E22861D108BB70012E007 /* LifeLineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeLineVC.swift; sourceTree = "<group>"; };
+		648E22881D108BE80012E007 /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		648E228A1D1093EF0012E007 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		648E228C1D1095880012E007 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		64D8BC2D1CE4D91100F8020A /* Baby App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D8BC301CE4D91200F8020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D8BC351CE4D91200F8020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboard.storyboard; sourceTree = "<group>"; };
@@ -145,6 +157,48 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		648E227D1D1088D40012E007 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				64310F5C1CEBB95E004D5BE7 /* Onboard.swift */,
+				64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */,
+				647654531CF3F84900612DBC /* SignupEmailVC.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		648E227E1D1088E10012E007 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				648E22821D108B310012E007 /* HomeVC.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		648E227F1D1088F00012E007 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				648E22841D108B940012E007 /* FeedVC.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		648E22801D1088F50012E007 /* LifeLine */ = {
+			isa = PBXGroup;
+			children = (
+				648E22861D108BB70012E007 /* LifeLineVC.swift */,
+			);
+			name = LifeLine;
+			sourceTree = "<group>";
+		};
+		648E22811D1088FD0012E007 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				648E22881D108BE80012E007 /* CalendarVC.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		64D8BC241CE4D91100F8020A = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +263,13 @@
 		64D8BC611CE4D93E00F8020A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				64310F5C1CEBB95E004D5BE7 /* Onboard.swift */,
-				64310F6C1CED64BE004D5BE7 /* SigninEmailVC.swift */,
-				647654531CF3F84900612DBC /* SignupEmailVC.swift */,
+				648E228A1D1093EF0012E007 /* BaseVC.swift */,
+				648E228C1D1095880012E007 /* TabBarController.swift */,
+				648E22811D1088FD0012E007 /* Calendar */,
+				648E22801D1088F50012E007 /* LifeLine */,
+				648E227F1D1088F00012E007 /* Feed */,
+				648E227E1D1088E10012E007 /* Home */,
+				648E227D1D1088D40012E007 /* Onboarding */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -448,12 +506,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				647654541CF3F84900612DBC /* SignupEmailVC.swift in Sources */,
+				648E22831D108B310012E007 /* HomeVC.swift in Sources */,
+				648E22851D108B940012E007 /* FeedVC.swift in Sources */,
+				648E228D1D1095880012E007 /* TabBarController.swift in Sources */,
 				64310F631CECD9AB004D5BE7 /* UIViewExt.swift in Sources */,
+				648E22871D108BB70012E007 /* LifeLineVC.swift in Sources */,
+				648E228B1D1093EF0012E007 /* BaseVC.swift in Sources */,
 				64310F5D1CEBB95E004D5BE7 /* Onboard.swift in Sources */,
 				64310F681CECE70E004D5BE7 /* HairlineView.swift in Sources */,
 				64D8BC391CE4D91200F8020A /* Baby_App.xcdatamodeld in Sources */,
 				64310F611CECD3AC004D5BE7 /* UIColorExt.swift in Sources */,
 				64D8BC311CE4D91200F8020A /* AppDelegate.swift in Sources */,
+				648E22891D108BE80012E007 /* CalendarVC.swift in Sources */,
 				64310F661CECDBCF004D5BE7 /* R.generated.swift in Sources */,
 				64310F6D1CED64BE004D5BE7 /* SigninEmailVC.swift in Sources */,
 			);

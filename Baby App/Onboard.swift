@@ -25,11 +25,11 @@ class Onboard: UIViewController {
     
     override func viewDidLoad() {
         // MARK: Setting the title and font of our buttons
-        let facebookString = FAKFontAwesome.facebookSquareIconWithSize(18).attributedString()
-        let twitterString = FAKFontAwesome.twitterIconWithSize(18).attributedString()
+        let facebookString = FAKFontAwesome.facebookSquareIconWithSize(20).attributedString()
+        let twitterString = FAKFontAwesome.twitterIconWithSize(20).attributedString()
         
-        let attr = [NSFontAttributeName: UIFont(name: "HelveticaNeue-Medium", size: 18)!,
-                    NSForegroundColorAttributeName: UIColor.expectingPurple()]
+        let attr = [NSFontAttributeName: UIFont(name: "AvenirNext-UltraLight", size: 21)!,
+                    NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let facebookButtonString = NSMutableAttributedString(attributedString: facebookString)
         let fbText: NSAttributedString = NSAttributedString(string: " Sign in with Facebook", attributes: attr)
@@ -83,11 +83,13 @@ class Onboard: UIViewController {
     // MARK: Move to AuthManager class
     func handleLogin(credential: FIRAuthCredential) {
         if let user = FIRAuth.auth()?.currentUser {
+            
             user.linkWithCredential(credential) { (user, error) in
                 if let error = error {
                     print(error.description)
                     return
                 }
+                
             }
         } else {
             FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
@@ -97,6 +99,10 @@ class Onboard: UIViewController {
                 }
             }
         }
+        
+        let storyboard = UIStoryboard(name: "App", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("app_tab") 
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     override func viewWillLayoutSubviews() {

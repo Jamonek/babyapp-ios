@@ -19,7 +19,7 @@ class SignupEmailVC: UIViewController {
     @IBOutlet weak var passwordTextField: HoshiTextField!
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
     
     @IBAction func signup() {
