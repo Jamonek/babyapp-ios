@@ -25,42 +25,42 @@ class Onboard: UIViewController {
     
     override func viewDidLoad() {
         // MARK: Setting the title and font of our buttons
-        let facebookString = FAKFontAwesome.facebookSquareIconWithSize(20).attributedString()
-        let twitterString = FAKFontAwesome.twitterIconWithSize(20).attributedString()
+        let facebookString = FAKFontAwesome.facebookSquareIcon(withSize: 20).attributedString()
+        let twitterString = FAKFontAwesome.twitterIcon(withSize: 20).attributedString()
         
         let attr = [NSFontAttributeName: UIFont(name: "AvenirNext-UltraLight", size: 21)!,
-                    NSForegroundColorAttributeName: UIColor.whiteColor()]
+                    NSForegroundColorAttributeName: UIColor.white]
         
-        let facebookButtonString = NSMutableAttributedString(attributedString: facebookString)
+        let facebookButtonString = NSMutableAttributedString(attributedString: facebookString!)
         let fbText: NSAttributedString = NSAttributedString(string: " Sign in with Facebook", attributes: attr)
-        facebookButtonString.appendAttributedString(fbText)
+        facebookButtonString.append(fbText)
         
-        let twitterButtonString = NSMutableAttributedString(attributedString: twitterString)
+        let twitterButtonString = NSMutableAttributedString(attributedString: twitterString!)
         let twitterText: NSAttributedString = NSAttributedString(string: " Sign in with Twitter", attributes: attr)
-        twitterButtonString.appendAttributedString(twitterText)
+        twitterButtonString.append(twitterText)
         
-        self.facebookButton.setAttributedTitle(facebookButtonString, forState: .Normal)
-        self.twitterButton.setAttributedTitle(twitterButtonString, forState: .Normal)
+        self.facebookButton.setAttributedTitle(facebookButtonString, for: UIControlState())
+        self.twitterButton.setAttributedTitle(twitterButtonString, for: UIControlState())
         
         // MARK: Targets for Facebook and Twitter button
-        self.facebookButton.addTarget(self, action: #selector(Onboard.loginWithFacebook(_:)), forControlEvents: .TouchUpInside)
-        self.twitterButton.addTarget(self, action: #selector(Onboard.loginWithTwitter(_:)), forControlEvents: .TouchUpInside)
+        self.facebookButton.addTarget(self, action: #selector(Onboard.loginWithFacebook(_:)), for: .touchUpInside)
+        self.twitterButton.addTarget(self, action: #selector(Onboard.loginWithTwitter(_:)), for: .touchUpInside)
     }
     
     // MARK: Login user with Facebook account
-    func loginWithFacebook(sender: UIButton) {
+    func loginWithFacebook(_ sender: UIButton) {
         let FB = FBSDKLoginManager()
-        FB.logInWithReadPermissions(["email"], fromViewController: self, handler: {(result, error) -> Void in
+        FB.logIn(withReadPermissions: ["email"], from: self, handler: {(result, error) -> Void in
             if error != nil {
                 print(error)
-            } else if result.isCancelled {
+            } else if (result?.isCancelled)! {
                 print("LOGIN CANCELLED")
             } else {
-                if result.grantedPermissions.contains("email") {
+                if (result?.grantedPermissions.contains("email"))! {
                     
-                    let token = FBSDKAccessToken.currentAccessToken().tokenString
+                    let token = FBSDKAccessToken.current().tokenString
                     
-                    let FAFBCredential = FIRFacebookAuthProvider.credentialWithAccessToken(token)
+                    let FAFBCredential = FIRFacebookAuthProvider.credential(withAccessToken: token!)
                     self.handleLogin(FAFBCredential)
                 }
             }
@@ -68,10 +68,10 @@ class Onboard: UIViewController {
     }
     
     // MARK: Login user with Twitter account
-    func loginWithTwitter(sender: UIButton) {
-        Twitter.sharedInstance().logInWithCompletion() { (session, error) in
+    func loginWithTwitter(_ sender: UIButton) {
+        Twitter.sharedInstance().logIn() { (session, error) in
             if let session = session {
-                let credential = FIRTwitterAuthProvider.credentialWithToken(session.authToken, secret: session.authTokenSecret)
+                let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
                 self.handleLogin(credential)
                 
             } else {
@@ -81,10 +81,10 @@ class Onboard: UIViewController {
     }
         
     // MARK: Move to AuthManager class
-    func handleLogin(credential: FIRAuthCredential) {
+    func handleLogin(_ credential: FIRAuthCredential) {
         if let user = FIRAuth.auth()?.currentUser {
             
-            user.linkWithCredential(credential) { (user, error) in
+            user.link(with: credential) { (user, error) in
                 if let error = error {
                     print(error.description)
                     return
@@ -92,7 +92,7 @@ class Onboard: UIViewController {
                 
             }
         } else {
-            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
                 if let error = error {
                     print(error.description)
                     return
@@ -101,21 +101,21 @@ class Onboard: UIViewController {
         }
         
         let storyboard = UIStoryboard(name: "App", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("app_tab") 
-        self.presentViewController(vc, animated: true, completion: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "app_tab") 
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewWillLayoutSubviews() {
         self.viewLogo.clipsToBounds = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
     }
 }

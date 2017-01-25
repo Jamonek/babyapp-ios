@@ -17,16 +17,18 @@ class SigninEmailVC: UIViewController {
     @IBOutlet weak var passwordTextField: HoshiTextField!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        // MARK: View logic 
     }
     
     @IBAction func signin() {
-        guard let email = emailTextField.text, password = passwordTextField.text else {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
             print("Failed")
             return
         }
         
-        TSMessage.showNotificationInViewController(self.navigationController, title: "Error", subtitle: "Bad password", type: .Error)
+        TSMessage.showNotification(in: self.navigationController, title: "Error", subtitle: "Bad password", type: .error)
         
         FIRAuth.auth()?.signInWithEmail(email, password: password) {(user, error) in
             if let error = error {

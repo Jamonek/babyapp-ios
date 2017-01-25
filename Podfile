@@ -2,10 +2,12 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Baby App' do
-    pod "ChameleonFramework/Swift"
-    pod "RxSwift",   '~> 2.0'
-    pod "RxCocoa",   '~> 2.0'
-    pod "Moya-ObjectMapper/RxSwift"
+    pod 'Alamofire', '~> 4.0'
+    pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+    pod "RxSwift",   '~> 3.0'
+    pod "RxCocoa",   '~> 3.0'
+    pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
+    pod 'Moya', :git => 'https://github.com/Moya/Moya'
     pod "FontAwesomeKit"
     pod "Fabric"
     pod "Crashlytics"

@@ -295,13 +295,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64D8BC581CE4D91300F8020A /* Build configuration list for PBXNativeTarget "Baby App" */;
 			buildPhases = (
-				27E083B3BBD3E25F68591BB1 /* 📦 Check Pods Manifest.lock */,
+				27E083B3BBD3E25F68591BB1 /* [CP] Check Pods Manifest.lock */,
 				64310F641CECDA9D004D5BE7 /* R.Swift Run Script */,
 				64D8BC291CE4D91100F8020A /* Sources */,
 				64D8BC2A1CE4D91100F8020A /* Frameworks */,
 				64D8BC2B1CE4D91100F8020A /* Resources */,
-				0F747BD952322A49159967B5 /* 📦 Embed Pods Frameworks */,
-				80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */,
+				0F747BD952322A49159967B5 /* [CP] Embed Pods Frameworks */,
+				80B1D675520530A5DFDCA656 /* [CP] Copy Pods Resources */,
 				64310F5E1CEBD0AC004D5BE7 /* CocoaPods Run Script */,
 			);
 			buildRules = (
@@ -356,19 +356,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Mehe, LLC";
 				TargetAttributes = {
 					64D8BC2C1CE4D91100F8020A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = W29D5BE398;
+						LastSwiftMigration = 0820;
 					};
 					64D8BC431CE4D91300F8020A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 64D8BC2C1CE4D91100F8020A;
 					};
 					64D8BC4E1CE4D91300F8020A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 64D8BC2C1CE4D91100F8020A;
 					};
 				};
@@ -425,14 +428,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F747BD952322A49159967B5 /* 📦 Embed Pods Frameworks */ = {
+		0F747BD952322A49159967B5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,14 +443,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby App/Pods-Baby App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		27E083B3BBD3E25F68591BB1 /* 📦 Check Pods Manifest.lock */ = {
+		27E083B3BBD3E25F68591BB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,14 +486,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
-		80B1D675520530A5DFDCA656 /* 📦 Copy Pods Resources */ = {
+		80B1D675520530A5DFDCA656 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,8 +591,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -633,8 +638,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -653,6 +660,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -661,12 +669,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B3A7A58936E7EFC25F65244F /* Pods-Baby App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.mehe.Expecting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -674,12 +684,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3661C51E0749A213639D55D1 /* Pods-Baby App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Baby App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.mehe.Expecting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -691,6 +703,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baby App.app/Baby App";
 			};
 			name = Debug;
@@ -703,6 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baby App.app/Baby App";
 			};
 			name = Release;
@@ -714,6 +728,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Baby App";
 			};
 			name = Debug;
@@ -725,6 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mehe.Baby-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Baby App";
 			};
 			name = Release;

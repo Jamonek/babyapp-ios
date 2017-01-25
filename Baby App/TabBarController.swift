@@ -11,7 +11,7 @@ import ChameleonFramework
 
 class TabBarController: UITabBarController {
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.expectingPurple(), withSecondaryColor: UIColor.flatMagentaColorDark(), usingFontName: "AvenirNext-Medium", andContentStyle: .Contrast)
     }
